@@ -1,0 +1,40 @@
+body {
+    background: url('<%= asset_path("spices.jpeg") %>') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .signup-card {
+    background: rgba(255, 255, 255, 0.9); /* slightly transparent */
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 420px;
+    backdrop-filter: blur(6px); /* smooth blur behind */
+  }
+
+  .form-control {
+    border-radius: 8px;
+  }
+
+  .btn-primary {
+    width: 100%;
+    border-radius: 8px;
+    background-color: #28a745;
+    border: none;
+  }
+
+  .btn-primary:hover {
+    background-color: #218838;
+  }
+
+  .toggle-password {
+    cursor: pointer;
+    user-select: none;
+  }

@@ -1,14 +1,86 @@
-<h1>Sign Up</h1>
-<%= form_with model: @user, url: users_create_path do |f| %>
-  <%= f.label :email %><br>
-  <%= f.email_field :email %><br>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign Up</title>
+    <style>
+      body {
+        background: url('<%= asset_path("spices.jpeg") %>') no-repeat center center fixed;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+      }
 
-  <%= f.label :password %><br>
-  <%= f.password_field :password %><br>
+      .signup-card {
+        background: rgba(255, 255, 255, 0.9); /* slightly transparent */
+        padding: 30px;
+        border-radius: 16px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+        width: 100%;
+        max-width: 420px;
+        backdrop-filter: blur(6px); /* smooth blur behind */
+      }
 
-  <%= f.label :password_confirmation %><br>
-  <%= f.password_field :password_confirmation %><br>
+      .form-control {
+        border-radius: 8px;
+      }
 
-  <%= f.submit "Sign Up" %>
-<% end %>
+      .btn-primary {
+        width: 100%;
+        border-radius: 8px;
+        background-color: #28a745;
+        border: none;
+      }
 
+      .btn-primary:hover {
+        background-color: #218838;
+      }
+
+      .toggle-password {
+        cursor: pointer;
+        user-select: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="signup-card">
+      <h2 class="text-center mb-4">Create Your Account</h2>
+
+      <%= form_with model: @user, url: users_create_path, local: true do |f| %>
+        <div class="mb-3">
+          <%= f.label :email, class: 'form-label' %>
+          <%= f.email_field :email, class: 'form-control', placeholder: 'Enter your email' %>
+        </div>
+
+        <div class="mb-3">
+          <%= f.label :password, class: 'form-label' %>
+          <div class="input-group">
+            <%= f.password_field :password, class: 'form-control', id: 'password', placeholder: 'Enter password' %>
+            <span class="input-group-text toggle-password" onclick="togglePassword('password')">👁️</span>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <%= f.label :password_confirmation, class: 'form-label' %>
+          <div class="input-group">
+            <%= f.password_field :password_confirmation, class: 'form-control', id: 'password_confirmation', placeholder: 'Confirm password' %>
+            <span class="input-group-text toggle-password" onclick="togglePassword('password_confirmation')">👁️</span>
+          </div>
+        </div>
+
+        <%= f.submit 'Sign Up', class: 'btn btn-primary mt-3' %>
+      <% end %>
+    </div>
+
+    <script>
+      function togglePassword(id) {
+        const field = document.getElementById(id);
+        field.type = field.type === "password" ? "text" : "password";
+      }
+    </script>
+  </body>
+</html>
