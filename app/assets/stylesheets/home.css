@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url('<%= asset_path("masale.jpg") %>') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+    color: #fff;
+  }
+
+  .overlay-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 16px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #fff;
+  }
+
+  .btn-signup {
+    background-color: #28a745;
+    border: none;
+    color: white;
+    margin-right: 15px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+
+  .btn-signup:hover {
+    background-color: #218838;
+  }
+
+  .btn-signin {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+
+  .btn-signin:hover {
+    background-color: #0056b3;
+  }
