@@ -1,0 +1,36 @@
+/* Buttons styles for SignIn and SignUp */
+
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+  border: none;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button-signup {
+  background-color: #4CAF50; /* Green */
+}
+
+.button-signup:hover {
+  background-color: #45a049;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.button-signin {
+  background-color: #008CBA; /* Blue */
+}
+
+.button-signin:hover {
+  background-color: #007bb5;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}

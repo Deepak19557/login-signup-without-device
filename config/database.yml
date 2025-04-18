@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  username: best_user        
+  password: 87654321 
+  pool: 5
+
+
+development:
+  <<: *default
+  database: best_development
+
+test:
+  <<: *default
+  database: best_test
