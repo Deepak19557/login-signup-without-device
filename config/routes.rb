@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
-  get 'dashboards/index'
+  resources :dashboards
   root 'home#index'
   get 'sessions/new'
   post 'sessions/create'
   get 'sessions/destroy'
   get 'users/new'
   post 'users/create'
+
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

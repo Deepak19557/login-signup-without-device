@@ -1,10 +1,14 @@
 source "https://rubygems.org"
 
-ruby "3.0.2"
+ruby '>= 3.2.0'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.1.5", ">= 7.1.5.1"
+# gem "rails", "~> 7.1.5", ">= 7.1.5.1"
 
+gem 'rails', '~> 8.0.0'
+
+# gem 'turbo-rails', '~> 2.0' 
+# gem 'web-console', '~> 4.2'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
@@ -68,3 +72,4 @@ group :test do
   gem "selenium-webdriver"
 end
 gem 'alquran'
+gem 'image_processing', '~> 1.2'

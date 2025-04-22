@@ -4,7 +4,7 @@
     <title>Sign Up</title>
     <style>
       body {
-        background: url('<%= asset_path("spices.jpeg") %>') no-repeat center center fixed;
+        background: url('<%= asset_path("masala3.jpeg") %>') no-repeat center center fixed;
         background-size: cover;
         display: flex;
         justify-content: center;
@@ -72,8 +72,14 @@
           </div>
         </div>
 
+        <div class="mb-3">
+          <%= f.label :role, "Select Role", class: "form-label" %>
+          <%= f.select :role, [['Customer', 'customer'], ['Admin', 'admin']], {}, class: "form-select" %>
+        </div>
+
         <%= f.submit 'Sign Up', class: 'btn btn-primary mt-3' %>
       <% end %>
+
     </div>
 
     <script>
